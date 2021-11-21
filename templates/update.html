@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form action="/update/{{ contact.id }}" method="POST">
+    <input type="text" required name="username" id="username" placeholder="Write name" value="{{ contact.username }}">
+    <input type="email" name="email" id="email" placeholder="Write email" value="{{ contact.email }}">
+    <input type="number" name="phone" id="phone_user" placeholder="Write phone" value="{{ contact.phone }}">
+    <button type="submit">Save</button>
+</form>
+{% endblock %}
