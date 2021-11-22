@@ -1,9 +1,50 @@
-{% extends 'layout.html' %}
-{% block body %}
-<form action="/update/{{ contact.id }}" method="POST">
-    <input type="text" required name="username" id="username" placeholder="Write name" value="{{ contact.username }}">
-    <input type="email" name="email" id="email" placeholder="Write email" value="{{ contact.email }}">
-    <input type="number" name="phone" id="phone_user" placeholder="Write phone" value="{{ contact.phone }}">
-    <button type="submit">Save</button>
-</form>
+{% extends 'layout.html' %} {% block body %}
+
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <form
+      action="/update/{{ contact.id }}"
+      method="POST"
+      class="card bg-dark text-white"
+    >
+      <div class="card-body p-4">
+        <div class="mb-3">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            required
+            name="username"
+            id="username"
+            placeholder="Write name"
+            value="{{ contact.username }}"
+            class="form-control rounded-0 bg-dark border-0 text-white"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Write email"
+            value="{{ contact.email }}"
+            class="form-control rounded-0 bg-dark border-0 text-white"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="phone">Phone:</label>
+          <input
+            type="number"
+            name="phone"
+            id="phone_user"
+            placeholder="Write phone"
+            value="{{ contact.phone }}"
+            class="form-control rounded-0 bg-dark border-0 text-white"
+          />
+        </div>
+        <button type="submit" class="btn btn-info">Update Contact</button>
+      </div>
+    </form>
+  </div>
+</div>
 {% endblock %}
