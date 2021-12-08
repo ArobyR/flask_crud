@@ -25,3 +25,5 @@ cd flask-sqlalchemy-crud
 pip install -r requirements.txt
 python index.py
 ```
+## Screenshot :camara:
+!["screenshot"](screenshot.png)
